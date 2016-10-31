@@ -1,0 +1,8 @@
+IsThereNewIntent if there is a new comic
+IsThereNewIntent if there is a new post
+IsThereNewIntent is there a new comic
+IsThereNewIntent is there a new post
+GetLatestIntent the latest comic
+GetLatestIntent the latest post
+
+

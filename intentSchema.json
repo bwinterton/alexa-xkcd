@@ -1,0 +1,10 @@
+{
+  "intents": [
+    {
+      "intent": "GetLatestIntent"
+    },
+    {
+      "intent": "IsThereNewIntent"
+    }
+  ]
+}
