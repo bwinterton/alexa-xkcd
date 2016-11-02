@@ -37,6 +37,7 @@ def push_to_s3(latest):
 
     # If the file already exists, then don't re-upload
     if s3_file_exists("xkcd-lambda", filename):
+        print "Latest XKCD has already been cached. Exiting now..."
         return
 
     r = requests.get(latest["image_url"], stream=True)
@@ -54,6 +55,7 @@ def push_to_s3(latest):
         }
     }
     bucket.upload_file(path, filename, extraArgs)
+    print "Latest XKCD Cached successfully!"
 
     return
 
@@ -62,6 +64,7 @@ def lambda_handler(event, context):
 
 def main():
     latest = get_latest_info()
+    print "Latest XKCD is number " + latest["num"] + ". Caching now..."
     push_to_s3(latest)
 
 
