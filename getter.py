@@ -28,7 +28,7 @@ def s3_file_exists(bucket, filename):
         else:
             raise e
     else:
-        return true
+        return True
 
 
 def push_to_s3(latest):
