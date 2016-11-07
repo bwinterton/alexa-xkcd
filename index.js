@@ -12,6 +12,18 @@ exports.handler = function(event, context, callback){
 var handlers = {
 
 	// TODO: Handle the "Open XKCD" command correctly and store sessions
+	'LaunchRequest' : function() {
+		this.emit(':ask', "Welcome to XKCD, would you like me to get the " +
+				  "latest post for you?");
+	}
+
+	'AMAZON.YesIntent' : function() {
+		// Call GetLatestIntent
+	}
+
+	'AMAZON.NoIntent' : function() {
+		this.emit(':tell', "Alright then! Goodbye!");
+	}
 
 	// TODO "Is there a new XKCD?"
 	'IsThereNewIntent' : function() {
